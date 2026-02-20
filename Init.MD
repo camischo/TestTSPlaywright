@@ -20,3 +20,12 @@ npm init playwright@latest
 
 instalar dependencias de cucumbre bdd
 npm install -D @cucumber/cucumber ts-node typescript @types/node
+
+agregar archivos al stage 
+git add .
+
+primer commit del setUp
+git commit -m "Setup commit inicial."
+
+subir los cambios al repositorio de git
+git push origin master
