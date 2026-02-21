@@ -2,7 +2,7 @@
 Feature: Buying a product in Sauce Demo Application
 
   @smoke @regression
-  Scenario: Successful login with valid credentials
+  Scenario: Add a product to the cart and complete the checkout process
     Given I am login on page Sauce Demo with username "standard_user" and password "secret_sauce"
     When I add the product "Sauce Labs Backpack" to the cart
     And I click the cart button
