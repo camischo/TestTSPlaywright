@@ -20,8 +20,8 @@ module.exports = {
         ],
         format: [
             "progress-bar",
-            "html:test-results/cucumber-report.html",
-            "json:test-results/cucumber-report.json",
+            "html:reports/cucumber-report.html",
+            "json:reports/cucumber-report.json",
             "rerun:@rerun.txt"
         ],
         parallel: 1
@@ -42,8 +42,8 @@ module.exports = {
         ],
         format: [
             "progress-bar",
-            "html:test-results/cucumber-report.html",
-            "json:test-results/cucumber-report.json",
+            "html:reports/cucumber-report.html",
+            "json:reports/cucumber-report.json",
             "rerun:@rerun.txt"
         ],
         parallel: 2
