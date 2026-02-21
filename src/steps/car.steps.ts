@@ -1,6 +1,6 @@
 import { When } from '@cucumber/cucumber';
 import { paginaLogin } from '../pages/Login.page';
-import CarPage from '../pages/Car.Page';
+import CarPage from '../pages/Car.page';
 
 let carPage : CarPage;
 
