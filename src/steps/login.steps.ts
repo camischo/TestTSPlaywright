@@ -1,5 +1,5 @@
 import { Given, When, Then } from '@cucumber/cucumber';
-import LoginPage, { paginaLogin } from '../pages/loginpage';
+import LoginPage, { paginaLogin } from '../pages/Login.page';
 import * as standard_user from '../data/user_standard.json';
 import * as locked_user from '../data/user_locked.json';
 
@@ -31,3 +31,9 @@ Then('I should be redirected to the inventory page',async function () {
 Then('I should see an error message indicating user blocked',async function () {
    await loginPage.errorMessageToHaveText("Epic sadface: Sorry, this user has been locked out.");
   });
+
+Given('I am login on page Sauce Demo with username {string} and password {string}', async function (username : string, password : string) {
+  loginPage = new LoginPage(paginaLogin.page);
+  await loginPage.navigateToLoginPage();
+  await loginPage.loginUser(username, password);
+         });

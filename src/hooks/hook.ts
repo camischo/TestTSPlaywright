@@ -1,6 +1,6 @@
 import { BeforeAll, AfterAll } from "@cucumber/cucumber";
-import { chromium, Page, Browser} from 'playwright';
-import { paginaLogin } from '../pages/loginpage';
+import { Page, Browser} from 'playwright';
+import { paginaLogin } from '../pages/Login.page';
 import { invokeBrowser } from "./browserManager";
 
 let page: Page;
