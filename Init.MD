@@ -21,6 +21,9 @@ npm init playwright@latest
 instalar dependencias de cucumbre bdd
 npm install -D @cucumber/cucumber ts-node typescript @types/node
 
+instalar cucumber report
+npm install cucumber-html-reporter --save-dev
+
 agregar archivos al stage 
 git add .
 
