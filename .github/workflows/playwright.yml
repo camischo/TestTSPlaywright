@@ -19,9 +19,16 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Cucumber tests
       run: npx cucumber-js --tags "@regression"
-    - uses: actions/upload-artifact@v4
+    - name: Upload test results artifact
+      uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
         name: cucumber-report
-        path: test-results/
-        retention-days: 30
+        path: reports/
+        retention-days: 7
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      if: always()
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./reports
